@@ -1,13 +1,18 @@
 package com.oliveira.connect.userconnect.domain;
 
-//import javax.persistence.Entity;
+import javax.persistence.Entity;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
 import java.io.Serializable;
 import java.util.Objects;
 
-//@Entity
+@Entity
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
     private String name;
     private String email;
